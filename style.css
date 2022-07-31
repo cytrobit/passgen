@@ -112,6 +112,10 @@ input#signNumbers:focus {
   font-weight: bold;
 }
 
+label {
+  color: #00b200;
+}
+
 input#generate {
   display: flex;
   justify-content: center;

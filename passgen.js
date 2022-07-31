@@ -1,19 +1,27 @@
 const signs = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPrRsStTuUwWxXyYzZ0123456789";
 const specSigns = '!@#$%^&*()-_+={}[]|;:"<>,./?';
+const superString = signs + specSigns;
 const btn = document.getElementById("generate");
 const reset = document.getElementById("reset");
 const section = document.querySelector("section");
 const btnCopy = document.querySelector("#btnCopy");
 let signNumbers = document.getElementById("signNumbers"); // number of signs in each code
 const divInput = document.createElement("textarea");
+const checkBox = document.getElementById('speChar');
 
 const codesGenerator = () => {
   let code = "";
   if (signNumbers.value > 5 && signNumbers.value <= 24 && signNumbers !== NaN) {
     for (let j = 0; j < signNumbers.value; j++) {
       // how many signs in each code - loop
-      const index = Math.floor(Math.random() * signs.length);
-      code += signs[index];
+      if(checkBox.checked) {
+        const index = Math.floor(Math.random() * superString.length);
+        code += superString[index];
+      } else {
+        const index = Math.floor(Math.random() * signs.length);
+        code += signs[index];
+      }
+      
     }
     divInput.remove();
     divInput.classList.add("res");
