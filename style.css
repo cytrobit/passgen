@@ -120,7 +120,6 @@ input#speChar {
   position: relative;
   background-color: #00b200;
   color: #000;
-  transition: 1s;
 }
 
 input#speChar::after {
@@ -147,31 +146,6 @@ input#speChar:checked::after {
   font-size: 10px;
   font-weight: bold;
 }
-
-
-
-/* input[type="checkbox"] {
-
-  width: 1.15em;
-  height: 1.15em;
-  border: 0.15em solid currentColor;
-  border-radius: 0.15em;
-  display: grid;
-  place-content: center;
-}
-
-input[type="checkbox"]::before {
-  content: "";
-  width: 0.65em;
-  height: 0.65em;
-  transform: scale(0);
-  transition: 120ms transform ease-in-out;
-  box-shadow: inset 1em 1em var(--form-control-color);
-}
-
-input[type="checkbox"]:checked::before {
-  transform: scale(1);
-}  */
 
 input#generate {
   display: flex;
@@ -338,8 +312,7 @@ footer a:hover {
   }
 
   input#signNumbers {
-    margin-top: 10px;
-    margin-left: 1px;
+    margin: 10px 0 10px 1px;
   }
 
   input#generate {
