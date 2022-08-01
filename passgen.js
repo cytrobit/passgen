@@ -27,6 +27,10 @@ const codesGenerator = () => {
     divInput.classList.add("res");
     divInput.textContent = code;
     section.appendChild(divInput);
+    signNumbers.style.backgroundColor="#000000";
+  } else {
+    signNumbers.style.backgroundColor="#FF0000";
+    alert('Podaj liczbę znaków dla swojego hasła (od 6 do 24)');
   }
 
   btnCopy.addEventListener("click", function () {
