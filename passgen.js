@@ -31,7 +31,9 @@ const codesGenerator = () => {
 
   btnCopy.addEventListener("click", function () {
     divInput.select();
-    document.execCommand("copy");
+    divInput.setSelectionRange(0, 24);
+    navigator.clipboard.writeText(divInput.value);
+    // console.log("Skopiowany text to: " + divInput.value);
   });
 };
 
